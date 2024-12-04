@@ -3,9 +3,8 @@ sudo apt-get --fix-broken --fix-missing install -y libgstreamer1.0-dev libgstrea
 
 sudo apt-get install -y meson libswscale-dev x264 libx264-dev
 
-sudo cp libgstagorasink.so /usr/local/lib/x86_64-linux-gnu/gstreamer-1.0/
-sudo cp libgstagorasrc.so /usr/local/lib/x86_64-linux-gnu/gstreamer-1.0/
-sudo cp libagora-ffmpeg.so  /usr/local/lib/ 
+sudo cp libgstagoraioudp.so /usr/local/lib/aarch64-linux-gnu/gstreamer-1.0/
+sudo cp libagora-fdkaac.so  /usr/local/lib/ 
 sudo cp libagora_rtc_sdk.so  /usr/local/lib/
-sudo cp libagorac.so /usr/local/lib/ 
+sudo cp libgstagorac.so /usr/local/lib/ 
 
