@@ -1,3 +1,4 @@
+# Agora GStreamer Plugin
 A fork of the gstreamer wrapper for Agora Linux SDK (agoraioudp sink only)
 
 ## Install gstreamer and dependencies
@@ -13,10 +14,13 @@ sudo apt install -y build-essential git libpcre3 libpcre3-dev zlib1g zlib1g-dev 
 sudo apt install -y libavcodec-dev libavformat-dev libavutil-dev nasm libavfilter-dev libopus-dev   
 ```
 
-## Test gstreamer install
+## Test GStreamer Installation
+Test the GStreamer installation with the following command:
+```
 gst-launch-1.0 -v videotestsrc pattern=ball is-live=true ! video/x-raw,format=I420,width=320,height=180,framerate=60/1 ! queue ! fakesink    
- 
-## Build and install agora gstreamer plugins
+ ```
+
+## Build and Install Agora GStreamer Plugins
 ```
 cd agora-gstreamer/build     
 ./build_all_4.2.30.sh    
@@ -25,26 +29,19 @@ cd agora-gstreamer/build
 If no errors are printed the new agora GST plugins will be installed on the system ready for use
 
 
-## Pipeline Configuration Properties
+## **Pipeline Configuration Properties**
+- `appid` - Sets the Agora app ID or token.
+- `channel` - Sets the Agora channel ID.
+- `userid` - (Optional) Specifies the Agora user ID to connect with.
+- `remoteuserid` - (Optional) Specifies a single user ID to subscribe to.
+- `audio` - Boolean (`true/false`) to specify if the pipeline is audio.
+- `verbose` - Boolean (`true/false`) to include logging output.
 
- appid -- sets agora app id or token
- 
- channel  -- sets agora channel id
-
- userid   -- sets agora userid to connect with (optional)
- 
- remoteuserid -- specifies a single userid to subscribe to (optional)
-
- audio -- boolean (true/false) to specify if pipeline is audio     
- 
- verbose -- boolean (true/false) to include logging output 
- 
-
-## Run and test
+## Run And Test
 You must always run the following export before using any of these plugins     
-
-   export GST_PLUGIN_PATH=/usr/local/lib/x86_64-linux-gnu/gstreamer-1.0   
-   
+```
+export GST_PLUGIN_PATH=/usr/local/lib/x86_64-linux-gnu/gstreamer-1.0   
+```
 
  ## agoraioudp
 
