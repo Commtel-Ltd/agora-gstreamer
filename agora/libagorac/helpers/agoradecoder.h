@@ -26,7 +26,7 @@ protected:
 
 private:
 
-  AVCodec        *m_avCodec;
+  const AVCodec        *m_avCodec;
   AVCodecContext *m_avContext;
 
   AVFrame        *m_avOutFrame;

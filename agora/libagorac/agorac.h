@@ -9,6 +9,9 @@
 
  #include "agoraconfig.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
  typedef  struct agora_context_t agora_context_t;
  typedef  void (*agora_log_func_t)(void*, const char*);
@@ -67,5 +70,8 @@ EXTERNC void agoraio_set_sendonly_flag(AgoraIoContext_t* ctx, int flag);
 
 #undef EXTERNC
 
-
+#ifdef __cplusplus
+}
 #endif
+
+#endif // AGORAC_H

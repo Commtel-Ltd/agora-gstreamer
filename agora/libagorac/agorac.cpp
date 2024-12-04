@@ -30,7 +30,7 @@
 
 #include "agoraio.h"
 
-
+extern "C" {
 
 //do not use it before calling agora_init
 void agora_log(agora_context_t* ctx, const char* message){
@@ -184,3 +184,6 @@ void agoraio_set_sendonly_flag(AgoraIoContext_t* ctx, int flag){
 
    ctx->agoraIo->setSendOnly(flag);
 }
+
+
+} // extern "C"
